@@ -28,7 +28,7 @@ var SmsOperator = {
                     "Accept":"application/json; charset=utf-8",
                     "Content-Type":"application/x-www-form-urlencoded;charset=utf-8"
             },
-            body: "mobile="+data.mobile+"&text="+data.text+"&apikey="+Config.APIKEY
+            body: "mobile="+data.mobile+"&text="+data.text+"&apikey="+data.apikey
         }).then(function(response) {
             return response.json();
         }).then(function(json) {
