@@ -18,7 +18,7 @@ var SmsOperator = {
             return {"MSG":"text 为空"};
         }
         
-        
+        console.log("----------单发短信-----------");
         console.log("----------data-----------");
         console.log(JSON.stringify(data));
         
