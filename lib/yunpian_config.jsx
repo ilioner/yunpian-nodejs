@@ -2,7 +2,6 @@
  * By TywinZhang
  */
 const yunpian_config = {};
-yunpian_config.APIKEY = "742eff2ebf1eff5857eec84cad1f4d9d";
 yunpian_config.SMS_HOST = "https://sms.yunpian.com";
 yunpian_config.VOICE_HOST = "https://voice.yunpian.com";
 yunpian_config.FLOW_HOST = "https://flow.yunpian.com";
