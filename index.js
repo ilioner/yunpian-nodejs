@@ -8,7 +8,7 @@ var Tools = require("./lib/Tools.jsx");
 var YunPianSDK = function () {
     
     //------单发短信-------//
-    this.sendMsg = function (callback) {
+    this.sendMsg = function () {
         var codeTool = Object.create(Tools);
         var data = {};
         var code = codeTool.getCode();
@@ -18,7 +18,16 @@ var YunPianSDK = function () {
         console.log('------data-----');
         console.log(data);
         var smsOperator = Object.create(SmsOperator);
-        smsOperator.single_send(data, code, callback);
+        smsOperator.single_send(data, code, function(result) {
+            return new Promise(function(resolve, reject) {
+                    resolve({
+                        result: result
+                    });
+                    reject({
+                        result: result
+                    });
+                });
+        });
     }
     
     

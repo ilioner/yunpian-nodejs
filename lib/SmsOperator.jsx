@@ -8,7 +8,7 @@ var fetch  = require("node-fetch");
 var SmsOperator = {
     
     //单发
-    single_send:function (data, code ,callback) {
+    single_send:function (data, code) {
     
         if (data.mobile == null) {
             return {"MSG":"mobile 为空"};
@@ -37,12 +37,28 @@ var SmsOperator = {
                 
                 json.VCODE = code;
                 // console.log(json);
-                callback(json);
+                // callback(json);
+                return new Promise(function(resolve, reject) {
+                    resolve({
+                        result: json
+                    });
+                    reject({
+                        result: json
+                    });
+                });
             } else {
                 console.log('------success------');
                 json.VCODE = code;
                 // console.log(json);
-                callback(json);
+                // callback(json);
+                return new Promise(function(resolve, reject) {
+                    resolve({
+                        result: json
+                    });
+                    reject({
+                        result: json
+                    });
+                });
             }
         });
     }

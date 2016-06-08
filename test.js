@@ -31,12 +31,9 @@ var YunPianSDK = require("./index.js");
 
 // var YunPianSDK = require('yunpian-nodejs');
 var r = new YunPianSDK();
-r.apikey = "742eff2exxxxxxc84cad1f4d9d";
-r.mobile = "185xxxx8620";
+r.apikey = "742eff2asdasd57eec84cad1f4d9d";
+r.mobile = "185asdasd8620";
 r.text = "【yunpian】您的验证码是";
-r.sendMsg(function(result){
-    console.log('--------result------');
-    console.log(result);
-});
+var res = r.sendMsg();
 
 
