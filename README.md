@@ -9,6 +9,10 @@
 ###单发
 
     var YunPianSDK = require('yunpian-nodejs');
-    var r = new YunPianSDK("apikey","136xxxxxx46","【yunpian】您的验证码是");
-    r.sendMsg();
+    var r = new YunPianSDK();
+    r.apikey = "742eff2xxxxxxad1f4d9d";
+    r.mobile = "185xxxx8620";
+    r.text = "【yunpian】您的验证码是";
+    var result = r.sendMsg();
+    var code = result.VCODE;
 
