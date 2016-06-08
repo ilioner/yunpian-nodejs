@@ -8,7 +8,7 @@ var fetch  = require("node-fetch");
 var SmsOperator = {
     
     //单发
-    single_send:function (data) {
+    single_send:function (data, code) {
     
         if (data.mobile == null) {
             return {"MSG":"mobile 为空"};
@@ -34,10 +34,15 @@ var SmsOperator = {
         }).then(function(json) {
             if (json.errno) {
                 console.log('------error------');
+                
+                json.VCODE = code;
                 console.log(json);
+                return json;
             } else {
                 console.log('------success------');
+                json.VCODE = code;
                 console.log(json);
+                return json;
             }
         });
     }

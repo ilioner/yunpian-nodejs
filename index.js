@@ -6,19 +6,19 @@ var UserOperator = require("./lib/UserOperator.jsx");
 var Tools = require("./lib/Tools.jsx");
 
 var YunPianSDK = function () {
-    var codeTool = Object.create(Tools);
     
     //------单发短信-------//
     this.sendMsg = function () {
         var codeTool = Object.create(Tools);
         var data = {};
+        var code = codeTool.getCode();
         data.mobile = this.mobile;
-        data.text = this.text + codeTool.getCode();
+        data.text = this.text + code;
         data.apikey = this.apikey;
         console.log('------data-----');
         console.log(data);
         var smsOperator = Object.create(SmsOperator);
-        smsOperator.single_send(data);
+        smsOperator.single_send(data, code);
     }
     
     

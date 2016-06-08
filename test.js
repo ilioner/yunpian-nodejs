@@ -2,7 +2,7 @@
  * By TywinZhang
  */
 
-var Index = require("./index.js");
+var YunPianSDK = require("./index.js");
 
 //----------------------短信-----------------------//
 // var codeTool = Object.create(CodeTool);
@@ -17,16 +17,23 @@ var Index = require("./index.js");
 // smsOperator.single_send(data);
 //------------------------------------------------//
 
-var indexObj = new Index();
-indexObj.apikey = "7854ed1068c89476fdc393618ac94b07";
-// console.log(indexObj.getUser());
+// var indexObj = new Index();
+// indexObj.apikey = "7854ed1068c89476fdc393618ac94b07";
+// // console.log(indexObj.getUser());
 
-var data = {};
+// var data = {};
 
-data.emergency_contact = "TywinWU";
-data.emergency_mobile = "18502850229";
-data.alarm_balance = "100";
-console.log(data);
-console.log(indexObj.setUser(data));
+// data.emergency_contact = "TywinWU";
+// data.emergency_mobile = "18502850229";
+// data.alarm_balance = "100";
+// console.log(data);
+// console.log(indexObj.setUser(data));
+
+// var YunPianSDK = require('yunpian-nodejs');
+var r = new YunPianSDK();
+r.apikey = "742eff2xxxxxxad1f4d9d";
+r.mobile = "185xxxx8620";
+r.text = "【yunpian】您的验证码是";
+console.log(r.sendMsg());
 
 
