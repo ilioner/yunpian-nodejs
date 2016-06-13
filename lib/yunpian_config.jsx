@@ -1,6 +1,7 @@
 /**
  * By TywinZhang
  */
+'use strict';
 const yunpian_config = {};
 yunpian_config.SMS_HOST = "https://sms.yunpian.com";
 yunpian_config.VOICE_HOST = "https://voice.yunpian.com";
