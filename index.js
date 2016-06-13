@@ -11,7 +11,7 @@ var YunPianSDK = function () {
     this.sendMsg = function () {
         var mobile = this.mobile;
         var text = this.text;
-        var apikey = this.mobile;
+        var apikey = this.apikey;
         return new Promise(function(resolve, reject) {
             var codeTool = Object.create(Tools);
             var data = {};
