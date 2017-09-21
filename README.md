@@ -6,7 +6,7 @@
     npm install yunpian-nodejs -save
     
 # 目前功能
-###单发
+单发
 
     var YunPianSDK = require('yunpian-nodejs');
     var r = new YunPianSDK();
@@ -14,7 +14,7 @@
     r.mobile = "185xxxx8620";
     r.text = "【yunpian】您的验证码是";
     r.sendMsg(function(result){
-    console.log('--------result------');
-    console.log(result);
+        console.log('--------result------');
+        console.log(result);
     });
 
